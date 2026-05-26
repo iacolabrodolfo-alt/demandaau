@@ -4,6 +4,7 @@
         "phpoffice/phpword": "*",
         "setasign/fpdi": "*",
         "smalot/pdfparser": "*",
-        "dompdf/dompdf": "*"
+        "dompdf/dompdf": "*",
+        "phpoffice/phpspreadsheet": "^5.7"
     }
 }

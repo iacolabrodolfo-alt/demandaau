@@ -12,7 +12,7 @@ require_once '../includes/auth.php';
     <style>
         .sidebar { background-color: #236785; min-height: 100vh; width: 260px; position: fixed; left: 0; top: 0; }
         .main-content { margin-left: 260px; padding: 20px; }
-        .btn-custom { background-color: #236785; color: white; }
+        .btn-custom { background-color: #236785; color: white; border: none; }
         .btn-custom:hover { background-color: #1a4f6b; }
     </style>
 </head>
@@ -24,7 +24,7 @@ require_once '../includes/auth.php';
         <h2>Importar Planilla Excel (formato "como se recibe")</h2>
         <div class="card mt-3">
             <div class="card-body">
-                <form action="../procesos/subir_excel.php" method="POST" enctype="multipart/form-data">
+                <form action="../procesos/importar_excel_handler.php" method="POST" enctype="multipart/form-data">
                     <div class="mb-3">
                         <label class="form-label">Archivo Excel (.xlsx, .xls)</label>
                         <input type="file" name="archivo_excel" class="form-control" accept=".xlsx, .xls" required>
@@ -33,14 +33,15 @@ require_once '../includes/auth.php';
                 </form>
             </div>
         </div>
+
         <?php if(isset($_GET['success']) && isset($_GET['insertados'])): ?>
             <div class="alert alert-success mt-3">
-                Se importaron <?php echo htmlspecialchars($_GET['insertados']); ?> registros correctamente.
+                ✅ Se importaron <?php echo htmlspecialchars($_GET['insertados']); ?> registros correctamente.
             </div>
         <?php endif; ?>
         <?php if(isset($_GET['error'])): ?>
             <div class="alert alert-danger mt-3">
-                Error: <?php echo htmlspecialchars($_GET['error']); ?>
+                ❌ Error: <?php echo htmlspecialchars($_GET['error']); ?>
             </div>
         <?php endif; ?>
     </div>
