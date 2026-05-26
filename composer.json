@@ -1,0 +1,9 @@
+{
+    "name": "rhernandez/demandaau",
+    "require": {
+        "phpoffice/phpword": "*",
+        "setasign/fpdi": "*",
+        "smalot/pdfparser": "*",
+        "dompdf/dompdf": "*"
+    }
+}
