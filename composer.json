@@ -3,7 +3,7 @@
     "require": {
         "phpoffice/phpword": "*",
         "setasign/fpdi": "*",
-        "smalot/pdfparser": "*",
+        "smalot/pdfparser": "^2.12",
         "dompdf/dompdf": "*",
         "phpoffice/phpspreadsheet": "^5.7"
     }
